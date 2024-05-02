@@ -11,7 +11,7 @@ const uint8_t ADC_CHAN = 0;
 const uint8_t LED = 25;
 
 const long THRESHOLD = 40;
-const int WAIT_TIME = 120;
+const int WAIT_TIME = 900;
 void blink_init(void) {
     for(int i = 0; i < 5;i++) {
         gpio_put(LED, 1);
@@ -23,7 +23,7 @@ void blink_init(void) {
 
 void run_watering(void) {
     gpio_put(PUMP_PIN, 1);
-    sleep_ms(3000);
+    sleep_ms(5000);
     gpio_put(PUMP_PIN, 0);
 }
 
